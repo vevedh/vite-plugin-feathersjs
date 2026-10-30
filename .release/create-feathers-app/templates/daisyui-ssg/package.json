@@ -1,0 +1,39 @@
+{
+  "name": "r17-daisyui-ssg",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.30.2",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev:api": "node api/server.mjs",
+    "typecheck": "vue-tsc --noEmit",
+    "build": "vite build --outDir dist/client && vite build --ssr src/entry-server.ts --outDir dist/server && node scripts/prerender.mjs",
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "serve:production": "node scripts/serve-static.mjs"
+  },
+  "dependencies": {
+    "@vevedh/vite-plugin-feathersjs": "0.2.6",
+    "@feathersjs/feathers": "^5.0.50",
+    "@feathersjs/errors": "^5.0.50",
+    "@feathersjs/koa": "^5.0.50",
+    "@feathersjs/express": "^5.0.50",
+    "@feathersjs/socketio": "^5.0.50",
+    "vue": "^3.5.44",
+    "pinia": "^3.0.4",
+    "socket.io-client": "^4.8.4",
+    "@vue/server-renderer": "^3.5.44"
+  },
+  "devDependencies": {
+    "vite": "^7.3.7",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/vite": "^4.1.0",
+    "daisyui": "^5.0.0",
+    "vue-tsc": "^3.0.7",
+    "typescript": "^5.9.3",
+    "@types/node": "^22.0.0"
+  }
+}

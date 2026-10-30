@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict'
+const url = 'http://127.0.0.1:8080'
+async function req(path, options = {}) { const response = await fetch(url + path, options); return { status: response.status, body: await response.text(), headers: response.headers } }
+const health = await req('/api/health')
+assert.equal(health.status, 200, health.body)
+assert.match(health.body, /feathers-v5/)
+const created = await req('/api/notes', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ title: 'r16-test' }) })
+assert.equal(created.status, 201, created.body)
+const note = JSON.parse(created.body)
+assert.equal(note.title, 'r16-test')
+const found = await req('/api/notes')
+assert.equal(found.status, 200, found.body)
+assert.ok(JSON.parse(found.body).some(n => n.id === note.id))
+const patched = await req(`/api/notes/${note.id}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ title: 'r16-updated' }) })
+assert.equal(patched.status, 200, patched.body)
+const removed = await req(`/api/notes/${note.id}`, { method: 'DELETE' })
+assert.equal(removed.status, 200, removed.body)
+const ssr = await req('/')
+assert.equal(ssr.status, 200, ssr.body)
+assert.match(ssr.body, /Quasar 2 SSR \+ FeathersJS v5/)
+assert.match(ssr.body, /Hello from FeathersJS v5/)
+assert.doesNotMatch(ssr.body, /firebaseConfig|apiKey|Bearer /)
+console.log('PASS: SSR HTML rendered with prefetched notes, API CRUD, no credentials in HTML')

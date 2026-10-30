@@ -1,0 +1,58 @@
+{
+  "name": "vite-plugin-feathersjs-quasar-ssr-candidate",
+  "version": "0.16.6-r2-candidate",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.30.2",
+  "scripts": {
+    "prepare:plugin": "npm run build --prefix ../..",
+    "dev:ssr": "quasar dev -m ssr",
+    "build:ssr": "quasar build -m ssr",
+    "api": "node api/server.mjs",
+    "edge": "node scripts/edge-proxy.mjs",
+    "check:contracts": "node --test",
+    "check:runtime": "node scripts/check-runtime.mjs",
+    "check:ssr": "node scripts/check-quasar-ssr.mjs",
+    "check:production": "node scripts/check-production.mjs",
+    "check:realtime": "node scripts/check-realtime.mjs",
+    "postinstall": "quasar prepare",
+    "check:preflight": "node scripts/preflight-r16.mjs --stage=dev",
+    "check:production-entry": "node scripts/ssr-entry.mjs",
+    "sync:plugin": "node scripts/sync-plugin-dist.mjs",
+    "check:production-deps": "node scripts/production-deps.mjs",
+    "prepare:production-deps": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/PREPARE_R16_PRODUCTION.ps1",
+    "check:notes": "node --test tests/notes-binding.test.mjs tests/notes-http.integration.test.mjs",
+    "check:browser": "playwright test --config playwright.config.mjs",
+    "check:browser:contracts": "node --test tests/browser-certification.test.mjs",
+    "check:browser:preflight": "node scripts/check-browser-prereqs.mjs"
+  },
+  "dependencies": {
+    "@feathersjs/feathers": "^5.0.50",
+    "@feathersjs/express": "^5.0.50",
+    "@feathersjs/koa": "^5.0.50",
+    "@feathersjs/errors": "^5.0.50",
+    "@feathersjs/socketio": "^5.0.50",
+    "@feathersjs/rest-client": "^5.0.50",
+    "@feathersjs/socketio-client": "^5.0.50",
+    "@quasar/extras": "^1.16.4",
+    "pinia": "^3.0.1",
+    "quasar": "^2.16.0",
+    "socket.io-client": "^4.8.4",
+    "vite-plugin-feathersjs": "file:../..",
+    "vue": "^3.5.21",
+    "vue-router": "^4.0.12",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^2.1.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.7",
+    "@types/express": "^4.17.21",
+    "vite": "^7.3.7",
+    "@playwright/test": "1.64.1"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}

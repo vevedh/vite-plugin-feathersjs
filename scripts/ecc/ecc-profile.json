@@ -1,0 +1,45 @@
+{
+  "name": "vevedh-full-web-stack-vite-ecc-optional",
+  "source": "https://ecc.tools/skills",
+  "upstream": "https://github.com/affaan-m/ECC",
+  "package": "ecc-universal",
+  "version": "2.2.3",
+  "strategy": "guided-opt-in",
+  "harnesses": [
+    "codex",
+    "claude",
+    "kimi"
+  ],
+  "defaultMode": "Plan",
+  "skills": [
+    "coding-standards",
+    "verification-loop",
+    "tdd-workflow",
+    "api-design",
+    "security-review",
+    "security-scan",
+    "database-migrations",
+    "deployment-patterns",
+    "docker-patterns",
+    "skill-stocktake"
+  ],
+  "commands": [
+    "verify",
+    "tdd",
+    "code-review",
+    "quality-gate"
+  ],
+  "agents": [
+    "security-reviewer",
+    "build-error-resolver",
+    "e2e-runner",
+    "doc-updater"
+  ],
+  "policy": {
+    "noAutomaticInstallation": true,
+    "noAutomaticHooks": true,
+    "noAutomaticPublish": true,
+    "noFullCatalogCopy": true,
+    "projectRulesTakePriority": true
+  }
+}

@@ -1,0 +1,7 @@
+# R16-r4 — Private Quasar MCP and Feathers regression notes
+
+The official Quasar MCP is an optional read-only documentation server. Client configs: `examples/quasar-ssr/.vscode/mcp.json`, `examples/quasar-ssr/.cursor/mcp.json`, both ignored by Git. Open the Quasar example folder as editor workspace. Command from repository root: `npx -y --fetch-retries=0 @quasar/mcp@1.0.0 --project ./examples/quasar-ssr` (stdio; use from an MCP client, not as a normal CLI). Reference https://quasar.dev/start/vs-code-configuration/.
+
+This author's environment had no Quasar MCP client connector and no npm-installed project dependencies. The MCP server was not run here. The developer's Windows setup can connect it to the installed Quasar package. Quasar 2.35.2 has compatible versioned component API, but the CLI docs bundled in app-vite v2.6.2 may be unavailable (the upstream docs bundle is for app-vite 3.9+). Review installed Quasar v2 SSR APIs directly when needed.
+
+Windows confirmation r16-r3: Quasar SSR compile PASS; SSR child stays alive and `/api/health` responded; POST `/api/notes` failed with native private field receiver 500 for Koa/Express. r16-r4 binds CRUD methods to original instance. Tests: two pure receiver/state tests PASS locally; one real Feathers service test and two API HTTP integration tests will run after `pnpm install` on Windows. No production SSR or Edge hydration certification claimed.

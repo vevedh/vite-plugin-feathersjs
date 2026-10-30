@@ -1,0 +1,35 @@
+{
+  "name": "@vevedh/create-feathers-app",
+  "version": "0.1.0-rc.2",
+  "type": "module",
+  "private": true,
+  "description": "Scaffold FeathersJS v5 projects with Quasar 2 or daisyUI, Vite, Vue 3 and Pinia",
+  "license": "MIT",
+  "bin": {
+    "create-feathers-app": "./bin/create-feathers-app.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "create",
+    "scaffold",
+    "vite",
+    "feathersjs",
+    "quasar",
+    "daisyui",
+    "vue",
+    "ssr",
+    "ssg"
+  ]
+}

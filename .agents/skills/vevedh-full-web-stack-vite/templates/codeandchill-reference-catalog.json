@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": 1,
+  "description": "Design references only. No purchased template source, markup, screenshots or assets are included.",
+  "policy": "inspiration-only-no-vendor-assets",
+  "source": "https://codeandchill.store/",
+  "licenseInformation": "https://codeandchill.store/license",
+  "templates": [
+    {
+      "id": "orrery",
+      "url": "https://codeandchill.store/templates/orrery",
+      "pattern": "developer-console",
+      "applicableUi": ["quasar2", "daisyui"],
+      "use": "Developer service overview, connected API statuses, searchable logs and clear secondary navigation"
+    },
+    {
+      "id": "fernly",
+      "url": "https://codeandchill.store/templates/fernly",
+      "pattern": "project-workspace",
+      "applicableUi": ["quasar2", "daisyui"],
+      "use": "Workspace navigation, compact metric summary, project/service list and dedicated detail panel"
+    },
+    {
+      "id": "sprig",
+      "url": "https://codeandchill.store/templates/sprig",
+      "pattern": "crm-notes",
+      "applicableUi": ["quasar2", "daisyui"],
+      "use": "Notes workflow, data list hierarchy and predictable loading/empty/error states"
+    },
+    {
+      "id": "noria",
+      "url": "https://codeandchill.store/templates/noria",
+      "pattern": "workflow-builder",
+      "applicableUi": ["quasar2", "daisyui"],
+      "use": "Service generator previews and wizard progression; no replication of paid template interactions"
+    }
+  ]
+}

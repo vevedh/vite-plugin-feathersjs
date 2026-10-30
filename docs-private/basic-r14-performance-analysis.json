@@ -1,0 +1,120 @@
+{
+  "generatedAt": "2026-10-28T16:28:55.675Z",
+  "profiles": [
+    "full",
+    "fast"
+  ],
+  "comparisonNote": "Different samples; lower startup time is not guaranteed.",
+  "aggregateMedianOfModeMedians": {
+    "full": 98997,
+    "fast": 83777
+  },
+  "summaries": [
+    {
+      "profile": "full",
+      "mode": "koa-rest",
+      "samples": 1,
+      "medianReadyMs": 91842
+    },
+    {
+      "profile": "fast",
+      "mode": "koa-rest",
+      "samples": 1,
+      "medianReadyMs": 81078
+    },
+    {
+      "profile": "full",
+      "mode": "express-rest",
+      "samples": 1,
+      "medianReadyMs": 102255
+    },
+    {
+      "profile": "fast",
+      "mode": "express-rest",
+      "samples": 1,
+      "medianReadyMs": 86379
+    },
+    {
+      "profile": "full",
+      "mode": "koa+socketio",
+      "samples": 1,
+      "medianReadyMs": 95739
+    },
+    {
+      "profile": "fast",
+      "mode": "koa+socketio",
+      "samples": 1,
+      "medianReadyMs": 81175
+    },
+    {
+      "profile": "full",
+      "mode": "express+socketio",
+      "samples": 1,
+      "medianReadyMs": 102539
+    },
+    {
+      "profile": "fast",
+      "mode": "express+socketio",
+      "samples": 1,
+      "medianReadyMs": 87723
+    }
+  ],
+  "rows": [
+    {
+      "profile": "fast",
+      "mode": "koa-rest",
+      "readyMs": 81078,
+      "status": "PASS",
+      "source": "basic-r14-fast-run1.json"
+    },
+    {
+      "profile": "fast",
+      "mode": "express-rest",
+      "readyMs": 86379,
+      "status": "PASS",
+      "source": "basic-r14-fast-run1.json"
+    },
+    {
+      "profile": "fast",
+      "mode": "koa+socketio",
+      "readyMs": 81175,
+      "status": "PASS",
+      "source": "basic-r14-fast-run1.json"
+    },
+    {
+      "profile": "fast",
+      "mode": "express+socketio",
+      "readyMs": 87723,
+      "status": "PASS",
+      "source": "basic-r14-fast-run1.json"
+    },
+    {
+      "profile": "full",
+      "mode": "koa-rest",
+      "readyMs": 91842,
+      "status": "PASS",
+      "source": "basic-r14-full-run1.json"
+    },
+    {
+      "profile": "full",
+      "mode": "express-rest",
+      "readyMs": 102255,
+      "status": "PASS",
+      "source": "basic-r14-full-run1.json"
+    },
+    {
+      "profile": "full",
+      "mode": "koa+socketio",
+      "readyMs": 95739,
+      "status": "PASS",
+      "source": "basic-r14-full-run1.json"
+    },
+    {
+      "profile": "full",
+      "mode": "express+socketio",
+      "readyMs": 102539,
+      "status": "PASS",
+      "source": "basic-r14-full-run1.json"
+    }
+  ]
+}

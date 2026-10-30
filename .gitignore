@@ -1,0 +1,5 @@
+/node_modules
+/dist
+.env
+.npmrc
+/docs/cli/node_modules

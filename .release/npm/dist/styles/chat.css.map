@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/styles/chat.css"],"sourcesContent":["/* TODO: Attempt to use UnoCSS instead */\n\nhtml {\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  color: #3F3F3F;\n}"],"mappings":";AAEA;AACE;AAAA;AAAA;AAAA;AAAA;AACA;AACA;AAAA;","names":[]}

@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-10-17T15:52:04.621Z",
+  "node": "v22.23.2",
+  "platform": "win32",
+  "cases": [
+    {
+      "label": "koa-rest",
+      "readyMs": 31383,
+      "status": "PASS"
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 29046,
+      "status": "PASS"
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 34777,
+      "status": "PASS"
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 28454,
+      "status": "PASS"
+    }
+  ]
+}

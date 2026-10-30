@@ -1,0 +1,77 @@
+Feathers koa API listening on http://127.0.0.1:3030/api (socketio=false)
+
+> r17-quasar-ssr@0.1.0 dev:ssr C:\devs\vite-plugin-feathersjs\examples\r17\generated\r17-quasar-ssr
+> quasar dev -m ssr
+
+
+ .d88888b.
+d88P" "Y88b
+888     888
+888     888 888  888  8888b.  .d8888b   8888b.  888d888
+888     888 888  888     "88b 88K          "88b 888P"
+888 Y8b 888 888  888 .d888888 "Y8888b. .d888888 888
+Y88b.Y8b88P Y88b 888 888  888      X88 888  888 888
+ "Y888888"   "Y88888 "Y888888  88888P' "Y888888 888
+       Y8b
+
+ App • Using quasar.config.ts in "ts" format
+ App •  TIP  • 🚀  You (or an AE) specified an explicit quasar.config file > devServer > port. It is recommended to use a different devServer > port for each Quasar mode to avoid browser cache issues. Example: ctx.mode.ssr ? 9100 : ...
+ App •  WAIT  • Compiling of SSR Webserver with Esbuild in progress...
+ App •  DONE  • SSR Webserver compiled with success by Esbuild • 57ms
+
+ App •  WAIT  • Booting Webserver...
+ App •  DONE  • Webserver is ready • 82ms
+
+
+ » Reported at............ 29/10/2026 22:30:38
+ » App dir................ C:\devs\vite-plugin-feathersjs\examples\r17\generated\r17-quasar-ssr
+ » App URL................ http://127.0.0.1:9100/
+ » Dev mode............... ssr
+ » Pkg quasar............. v2.35.2
+ » Pkg @quasar/app-vite... v2.6.2
+ » Browser target......... es2022|chrome115|firefox115
+ » Node target............ node22
+
+
+ App •  Rendered  • / • 8158ms
+
+ App •  Rendered  • / • 7179ms
+
+ App •  Rendered  • / • 6044ms
+
+ App •  Rendered  • / • 4888ms
+
+ App •  Rendered  • / • 3322ms
+
+ App •  Rendered  • / • 2629ms
+
+ App •  Rendered  • / • 626ms
+
+ App •  Rendered  • / • 52ms
+Local edge http://127.0.0.1:8080 -> /api (3030), /socket.io (3031), SSR (9100)
+
+ App •  Rendered  • / • 184ms
+
+ App •  Rendered  • / • 38ms
+
+ App •  Rendered  • / • 49ms
+
+ App •  Rendered  • / • 54ms
+
+ App •  Rendered  • / • 38ms
+
+ App •  Rendered  • / • 89ms
+
+ App •  Rendered  • / • 88ms
+
+ App •  Rendered  • / • 45ms
+
+ App •  Rendered  • / • 90ms
+
+ App •  Rendered  • / • 98ms
+
+ App •  Rendered  • / • 77ms
+
+ App •  Rendered  • / • 89ms
+
+ App •  Rendered  • / • 58ms

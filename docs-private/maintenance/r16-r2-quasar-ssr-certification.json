@@ -1,0 +1,26 @@
+{
+  "candidate": "r16-r2",
+  "pluginVersion": "0.2.6",
+  "quasarExampleVersion": "0.16.2-candidate",
+  "baseline": "r16-r1 Vitesse E2E Windows PASS (user logs)",
+  "localNodeTests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "changes": [
+    "quasar entry-point marker",
+    "preflight and pnpm snapshot sync",
+    "Windows fail-fast process handling",
+    "compiled SSR production entry verification"
+  ],
+  "pending": [
+    "Quasar v2 real install",
+    "Quasar prepare",
+    "Quasar SSR build",
+    "SSR HTTP 200",
+    "SSR Pinia hydration in Edge",
+    "API CRUD / Socket.IO E2E",
+    "production compiled runtime"
+  ],
+  "productionCertified": false
+}

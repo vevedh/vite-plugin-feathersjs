@@ -1,0 +1,60 @@
+{
+  "generatedAt": "2026-10-28T16:54:47.229Z",
+  "node": "v22.23.4",
+  "platform": "win32",
+  "profile": "full-vitesse",
+  "configLoader": "bundle",
+  "repetitions": 1,
+  "cases": [
+    {
+      "label": "koa-rest",
+      "readyMs": 76958,
+      "configLoader": "bundle",
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 69643,
+      "configLoader": "bundle",
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 65926,
+      "configLoader": "bundle",
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 73104,
+      "configLoader": "bundle",
+      "status": "PASS",
+      "run": 1
+    }
+  ],
+  "summaries": [
+    {
+      "label": "koa-rest",
+      "medianMs": 76958,
+      "samples": 1
+    },
+    {
+      "label": "express-rest",
+      "medianMs": 69643,
+      "samples": 1
+    },
+    {
+      "label": "koa+socketio",
+      "medianMs": 65926,
+      "samples": 1
+    },
+    {
+      "label": "express+socketio",
+      "medianMs": 73104,
+      "samples": 1
+    }
+  ]
+}

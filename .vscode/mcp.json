@@ -1,0 +1,23 @@
+{
+  "servers": {
+    "feathers-v5-local": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "examples/basic/scripts/feathers-v5-mcp.mjs"
+      ]
+    },
+    "feathersjs-docs-v6-reference": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "feathersjs-mcp@1.0.16"
+      ]
+    },
+    "vite-local": {
+      "type": "sse",
+      "url": "http://localhost:3333/__mcp/sse"
+    }
+  }
+}

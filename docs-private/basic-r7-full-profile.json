@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-10-28T17:21:13.700Z",
+  "node": "v22.23.4",
+  "platform": "win32",
+  "profile": "full-vitesse",
+  "configLoader": "bundle",
+  "repetitions": 1,
+  "cases": [
+    {
+      "label": "koa-rest",
+      "status": "FAIL",
+      "error": "Error: Timeout: koa-rest HTTP readiness",
+      "run": 1
+    },
+    {
+      "label": "express-rest",
+      "status": "FAIL",
+      "error": "Error: Timeout: express-rest HTTP readiness",
+      "run": 1
+    },
+    {
+      "label": "koa+socketio",
+      "status": "FAIL",
+      "error": "Error: Timeout: koa+socketio HTTP readiness",
+      "run": 1
+    },
+    {
+      "label": "express+socketio",
+      "status": "FAIL",
+      "error": "Error: Timeout: express+socketio HTTP readiness",
+      "run": 1
+    }
+  ],
+  "summaries": [
+    {
+      "label": "koa-rest",
+      "medianMs": null,
+      "samples": 0
+    },
+    {
+      "label": "express-rest",
+      "medianMs": null,
+      "samples": 0
+    },
+    {
+      "label": "koa+socketio",
+      "medianMs": null,
+      "samples": 0
+    },
+    {
+      "label": "express+socketio",
+      "medianMs": null,
+      "samples": 0
+    }
+  ]
+}

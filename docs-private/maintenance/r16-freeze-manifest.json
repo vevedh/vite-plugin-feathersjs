@@ -1,0 +1,38 @@
+{
+  "id": "vite-plugin-feathersjs-r16-quasar-ssr-2026-10-28",
+  "snapshot_archive": "vite-plugin-feathersjs-0.2.6-r16-r6-r3-quasar-ssr-hydration-qinput.zip",
+  "published_npm": {
+    "name": "@vevedh/vite-plugin-feathersjs",
+    "version": "0.2.6",
+    "registry_integrity": "sha512-nXH1a+3Ey1eE/eYzfZynZHBeUcACV1CR1Te8yKZhkit0nTZDCAglxgyjIo7udMwYk9Tdy1qvNMYSHMiCClc+SA=="
+  },
+  "internal_example_version": "0.16.6-r2-candidate",
+  "evidence": "journaux PowerShell du mainteneur, 2026-10-28",
+  "frozen_files": {
+    "package.json": "0fc7102e04a43bdb581bf408a5ef68b1d4c264926d68353a76f37a76c7ad50d5",
+    "README.md": "253e83e7764d3bf50a90ff8fd7beeab131d7a83fb44514859fc4230947fe6ad8",
+    "scripts/stage-npm-release.mjs": "5ae4b62bed6347ff75ccca5941ef8389379303d5dcaeeb494d3ae82a4995a916",
+    "src/app.ts": "67b569e3102d931cd80c2ac667d2f2102a7233e469f2689237ff79ccaf6b7ce4",
+    "src/index.ts": "cc679546d762161c3bb885e55c4e4c1b26dcae3623a688e12d8b114e4ef43b8f",
+    "src/options.ts": "597c63e10bb6793118c146ba32cc1dd0cbc087a7b47cffeafb1f83f141459244",
+    "src/types.ts": "29c752fcd5bdd28e9c8c084581bec547ab7b6a39a0dace3657f51e3c592e3ef5",
+    "examples/quasar-ssr/api/server.mjs": "975201af95e27f493175f6759c671eef23f2a422acf43548e124d317c6c22688",
+    "examples/quasar-ssr/api/services/notes/notes.class.mjs": "c949dd8813c89dba7bcadc26838e469a92c587f7fcaab0f8c8e1c11e8fae7e94",
+    "examples/quasar-ssr/api/services/notes/notes.service.mjs": "9189ba930c32cc326fb18e4e07d5126ed2dfe61d1fc7fe4e13cda3c2c866cc4d",
+    "examples/quasar-ssr/api/services/health/health.class.mjs": "445d4b3cb32e1bce164e39aa5f1aa41bf83cfde67a8886bd8fafc1b3d39c659d",
+    "examples/quasar-ssr/api/services/health/health.service.mjs": "86f8928cc35a9af1301bb2b5c60d63b4248b3d31e8414ae69b3ab3d6e14008ef",
+    "examples/quasar-ssr/src/pages/IndexPage.vue": "badc04e6de25eba433dc3f05d6c81287ab3b848c2f580e9277ca09fca75fa95d",
+    "examples/quasar-ssr/src/stores/notes.ts": "47dff6025377d09c25b5f19da68483ced4e1c6a2acf73d1f5f209db7b7209b18",
+    "examples/quasar-ssr/src/stores/index.ts": "a3d21d1edf505fcb37465c19f278fa000fb3d6e93659e9967d6e2ef6eb28a7d5",
+    "examples/quasar-ssr/playwright.config.mjs": "8a4b01a754fdf726ef83dde70efc098216902553ec1c2970c679ce73888ab529",
+    "examples/quasar-ssr/e2e/quasar-ssr-browser.pw.mjs": "9c26c1f5f0aadc06398a67fc5129fb277059ea3c1de67d7ebbbb664ebf07d9af",
+    "examples/quasar-ssr/scripts/CERTIFY_R16_WINDOWS.ps1": "b50cf07095ea8ce5d5ef04a7b4fe90ef8d505f5d18bd1a51cb036a633b6795ed",
+    "examples/quasar-ssr/src-ssr/server.ts": "e9da79dedd8b462bbd7622ee6c9e9962315b8821081f81392ea59ed4d131e2c6",
+    "examples/quasar-ssr/quasar.config.ts": "c117b8e906d6000d5b7b3187694d583dafb2476acd9d695de25c3d851b3360c7"
+  },
+  "notes": [
+    "Figer les sources R16; aucun nouveau npm publish en 0.2.6.",
+    "Le manifest ne prouve pas les tests; ils sont documentés séparément à partir des journaux Windows.",
+    "Le nom/version internes de l’exemple restent ceux réellement testés, malgré l’étiquette de l’archive r3."
+  ]
+}

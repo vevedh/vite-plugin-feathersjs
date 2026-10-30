@@ -1,0 +1,30 @@
+.DS_Store
+.vite-ssg-dist
+.vite-ssg-temp
+*.local
+dist
+dist-ssr
+node_modules
+.idea/
+*.log
+cypress/downloads
+public/assets/fonts
+
+# Local Feathers service generator temporary transaction artifacts
+.feathers-staging-*/
+.feathers-generate.lock
+
+# Local agent setup, MCP/editor connections and private documentation
+AGENTS.md
+SKILLS.md
+.agents/
+.ai/
+.codex/
+.cursor/
+.vscode/mcp.json
+.mcp.json
+.claude/
+docs-private/
+skill-setup/
+*.prompt.md
+*agent-session*.log

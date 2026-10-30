@@ -1,0 +1,103 @@
+{
+  "generatedAt": "2026-10-17T17:38:02.182Z",
+  "node": "v22.23.2",
+  "platform": "win32",
+  "profile": "transport-only",
+  "repetitions": 3,
+  "cases": [
+    {
+      "label": "koa-rest",
+      "readyMs": 30840,
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 37233,
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 42470,
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 44453,
+      "status": "PASS",
+      "run": 1
+    },
+    {
+      "label": "koa-rest",
+      "readyMs": 37969,
+      "status": "PASS",
+      "run": 2
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 33731,
+      "status": "PASS",
+      "run": 2
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 37249,
+      "status": "PASS",
+      "run": 2
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 40781,
+      "status": "PASS",
+      "run": 2
+    },
+    {
+      "label": "koa-rest",
+      "readyMs": 44421,
+      "status": "PASS",
+      "run": 3
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 38917,
+      "status": "PASS",
+      "run": 3
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 42320,
+      "status": "PASS",
+      "run": 3
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 48792,
+      "status": "PASS",
+      "run": 3
+    }
+  ],
+  "summaries": [
+    {
+      "label": "koa-rest",
+      "medianMs": 37969,
+      "samples": 3
+    },
+    {
+      "label": "express-rest",
+      "medianMs": 37233,
+      "samples": 3
+    },
+    {
+      "label": "koa+socketio",
+      "medianMs": 42320,
+      "samples": 3
+    },
+    {
+      "label": "express+socketio",
+      "medianMs": 44453,
+      "samples": 3
+    }
+  ]
+}

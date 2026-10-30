@@ -1,0 +1,12 @@
+{
+  "candidate": "basic-r15-r1",
+  "tests": "static passed locally, not Windows network certified",
+  "fixes": [
+    "html-e2e-env-isolation",
+    "blank-preload-off",
+    "fail-fast-on-child-exit",
+    "render-planner-spa-ssr-ssg"
+  ],
+  "runtimeTransportsModified": false,
+  "dependenciesModified": false
+}

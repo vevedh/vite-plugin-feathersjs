@@ -1,0 +1,19 @@
+# Generated certification applications (source templates remain versioned)
+/examples/r17/generated/
+/examples/**/node_modules/
+/examples/**/dist/
+/examples/**/.quasar/
+/examples/**/.vite/
+/examples/**/playwright-report/
+/examples/**/test-results/
+/.release/
+
+# Internal coding-assistant files, not part of product deliverables
+/.agents/
+/.claude/
+/.codex/
+/.cursor/
+/.windsurf/
+**/AGENTS.md
+**/CLAUDE.md
+**/.aider*

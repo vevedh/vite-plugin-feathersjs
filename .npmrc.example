@@ -1,0 +1,7 @@
+; Example only — do not commit real tokens
+; Use an environment variable for auth
+; In PowerShell:   $env:NPM_TOKEN = "<your-token>"
+; In bash:         export NPM_TOKEN="<your-token>"
+; Then npm will read it when this file exists locally (not committed)
+//registry.npmjs.org/:_authToken=${NPM_TOKEN}
+

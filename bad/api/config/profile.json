@@ -1,0 +1,12 @@
+{
+  "schema": "typebox",
+  "auth": "none",
+  "databases": [
+    {
+      "alias": "main",
+      "adapter": "memory"
+    }
+  ],
+  "primary": "main",
+  "operational": true
+}

@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+
+const read = path => readFileSync(new URL(path, import.meta.url), 'utf8')
+const client = read('../src/lib/feathers-client.ts')
+const store = read('../src/feathers/services/notes/store.ts')
+const alias = read('../src/stores/notes.ts')
+assert.match(alias, /export \{ useNotesStore \}/)
+const page = read('../src/pages/feathers.vue')
+const pkg = JSON.parse(read('../package.json'))
+for (const name of ['@feathersjs/feathers', '@feathersjs/rest-client', '@feathersjs/socketio-client', 'socket.io-client'])
+  assert.ok(pkg.dependencies[name], `Missing runtime dependency: ${name}`)
+assert.match(client, /client\.configure\(socketio\(socket\)\)/)
+assert.match(client, /client\.configure\(rest\(`\$\{window\.location\.origin\}\/api`\)/)
+assert.match(store, /defineStore\('feathers-notes'/)
+assert.match(store, /if \(typeof window === 'undefined'/)
+assert.match(store, /api\.service\.off\(event, listener\)/)
+assert.match(page, /useNotesStore\(\)/)
+assert.doesNotMatch(page, /socket\.emit\(/)
+console.log('PASS: typed Feathers v5 client + Pinia store contract')

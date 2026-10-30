@@ -1,0 +1,25 @@
+{
+  "candidate": "0.2.6-basic-r14-r1",
+  "source": "vite-plugin-feathersjs-0.2.6-vitesse-basic-r14-services-fast-preload.zip",
+  "scope": [
+    "legacy-flat-service-migration",
+    "shared-health-schema-duplicate",
+    "fast-mode-pwa-virtual-module"
+  ],
+  "verified": [
+    "node scripts test-r14-migration",
+    "node scripts check-r14-structure",
+    "node test-html-preload",
+    "node generator tests strict TS with declarations",
+    "test-r14-structure on r13 legacy overlay",
+    "TypeScript parse/transpile all 38 TS/TSX sources",
+    "node --check on 34 mjs scripts",
+    "supporting static contracts"
+  ],
+  "pending": [
+    "full vue-tsc Windows with dependencies",
+    "E2E four modes Windows",
+    "HTML preload E2E Windows",
+    "Full versus Fast benchmark"
+  ]
+}

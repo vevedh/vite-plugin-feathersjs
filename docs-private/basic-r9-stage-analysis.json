@@ -1,0 +1,352 @@
+{
+  "generatedAt": "2026-10-17T21:17:35.352Z",
+  "source": "basic-r8-alternated-profile.json",
+  "rows": [
+    {
+      "run": 1,
+      "profile": "full",
+      "mode": "koa-rest",
+      "readyMs": 50848,
+      "beforeConfigMs": 48160,
+      "afterConfigMs": 2688,
+      "feathersMs": 1651,
+      "serviceLoadMs": 1353,
+      "beforeConfigPercent": 94.7,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 23123.51
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "full",
+      "mode": "express-rest",
+      "readyMs": 29892,
+      "beforeConfigMs": 27746,
+      "afterConfigMs": 2146,
+      "feathersMs": 1041,
+      "serviceLoadMs": 825,
+      "beforeConfigPercent": 92.8,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 9071.24
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "full",
+      "mode": "koa+socketio",
+      "readyMs": 30610,
+      "beforeConfigMs": 28804,
+      "afterConfigMs": 1806,
+      "feathersMs": 1027,
+      "serviceLoadMs": 781,
+      "beforeConfigPercent": 94.1,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 8646.98
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "full",
+      "mode": "express+socketio",
+      "readyMs": 32811,
+      "beforeConfigMs": 29736,
+      "afterConfigMs": 3075,
+      "feathersMs": 1709,
+      "serviceLoadMs": 1381,
+      "beforeConfigPercent": 90.6,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 9333.06
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "transport",
+      "mode": "koa-rest",
+      "readyMs": 33055,
+      "beforeConfigMs": 30271,
+      "afterConfigMs": 2784,
+      "feathersMs": 1379,
+      "serviceLoadMs": 1129,
+      "beforeConfigPercent": 91.6,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 9431.81
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "transport",
+      "mode": "express-rest",
+      "readyMs": 46239,
+      "beforeConfigMs": 42287,
+      "afterConfigMs": 3952,
+      "feathersMs": 2238,
+      "serviceLoadMs": 1637,
+      "beforeConfigPercent": 91.5,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10871.92
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "transport",
+      "mode": "koa+socketio",
+      "readyMs": 50401,
+      "beforeConfigMs": 47659,
+      "afterConfigMs": 2742,
+      "feathersMs": 1408,
+      "serviceLoadMs": 1146,
+      "beforeConfigPercent": 94.6,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 12696.7
+        }
+      ]
+    },
+    {
+      "run": 1,
+      "profile": "transport",
+      "mode": "express+socketio",
+      "readyMs": 62222,
+      "beforeConfigMs": 57174,
+      "afterConfigMs": 5048,
+      "feathersMs": 2634,
+      "serviceLoadMs": 2060,
+      "beforeConfigPercent": 91.9,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 21195.02
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "transport",
+      "mode": "koa-rest",
+      "readyMs": 30941,
+      "beforeConfigMs": 28898,
+      "afterConfigMs": 2043,
+      "feathersMs": 966,
+      "serviceLoadMs": 766,
+      "beforeConfigPercent": 93.4,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 8554.05
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "transport",
+      "mode": "express-rest",
+      "readyMs": 50125,
+      "beforeConfigMs": 47926,
+      "afterConfigMs": 2199,
+      "feathersMs": 1230,
+      "serviceLoadMs": 929,
+      "beforeConfigPercent": 95.6,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 11379.84
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "transport",
+      "mode": "koa+socketio",
+      "readyMs": 34325,
+      "beforeConfigMs": 32056,
+      "afterConfigMs": 2269,
+      "feathersMs": 1494,
+      "serviceLoadMs": 1203,
+      "beforeConfigPercent": 93.4,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10106.77
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "transport",
+      "mode": "express+socketio",
+      "readyMs": 39799,
+      "beforeConfigMs": 37589,
+      "afterConfigMs": 2210,
+      "feathersMs": 1169,
+      "serviceLoadMs": 925,
+      "beforeConfigPercent": 94.4,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 13624.38
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "full",
+      "mode": "koa-rest",
+      "readyMs": 37846,
+      "beforeConfigMs": 35769,
+      "afterConfigMs": 2077,
+      "feathersMs": 1166,
+      "serviceLoadMs": 945,
+      "beforeConfigPercent": 94.5,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10256.95
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "full",
+      "mode": "express-rest",
+      "readyMs": 35511,
+      "beforeConfigMs": 31922,
+      "afterConfigMs": 3589,
+      "feathersMs": 2073,
+      "serviceLoadMs": 1713,
+      "beforeConfigPercent": 89.9,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10205.96
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "full",
+      "mode": "koa+socketio",
+      "readyMs": 42507,
+      "beforeConfigMs": 40838,
+      "afterConfigMs": 1669,
+      "feathersMs": 998,
+      "serviceLoadMs": 782,
+      "beforeConfigPercent": 96.1,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10545.8
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "profile": "full",
+      "mode": "express+socketio",
+      "readyMs": 39083,
+      "beforeConfigMs": 36321,
+      "afterConfigMs": 2762,
+      "feathersMs": 1523,
+      "serviceLoadMs": 1254,
+      "beforeConfigPercent": 92.9,
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 10685.16
+        }
+      ]
+    }
+  ],
+  "summary": [
+    {
+      "profile": "full",
+      "mode": "koa-rest",
+      "samples": 2,
+      "medianReadyMs": 44347,
+      "medianBeforeConfigMs": 41964.5,
+      "medianFeathersMs": 1408.5,
+      "medianBeforeConfigPercent": 94.6
+    },
+    {
+      "profile": "full",
+      "mode": "express-rest",
+      "samples": 2,
+      "medianReadyMs": 32701.5,
+      "medianBeforeConfigMs": 29834,
+      "medianFeathersMs": 1557,
+      "medianBeforeConfigPercent": 91.35
+    },
+    {
+      "profile": "full",
+      "mode": "koa+socketio",
+      "samples": 2,
+      "medianReadyMs": 36558.5,
+      "medianBeforeConfigMs": 34821,
+      "medianFeathersMs": 1012.5,
+      "medianBeforeConfigPercent": 95.1
+    },
+    {
+      "profile": "full",
+      "mode": "express+socketio",
+      "samples": 2,
+      "medianReadyMs": 35947,
+      "medianBeforeConfigMs": 33028.5,
+      "medianFeathersMs": 1616,
+      "medianBeforeConfigPercent": 91.75
+    },
+    {
+      "profile": "transport",
+      "mode": "koa-rest",
+      "samples": 2,
+      "medianReadyMs": 31998,
+      "medianBeforeConfigMs": 29584.5,
+      "medianFeathersMs": 1172.5,
+      "medianBeforeConfigPercent": 92.5
+    },
+    {
+      "profile": "transport",
+      "mode": "express-rest",
+      "samples": 2,
+      "medianReadyMs": 48182,
+      "medianBeforeConfigMs": 45106.5,
+      "medianFeathersMs": 1734,
+      "medianBeforeConfigPercent": 93.55
+    },
+    {
+      "profile": "transport",
+      "mode": "koa+socketio",
+      "samples": 2,
+      "medianReadyMs": 42363,
+      "medianBeforeConfigMs": 39857.5,
+      "medianFeathersMs": 1451,
+      "medianBeforeConfigPercent": 94
+    },
+    {
+      "profile": "transport",
+      "mode": "express+socketio",
+      "samples": 2,
+      "medianReadyMs": 51010.5,
+      "medianBeforeConfigMs": 47381.5,
+      "medianFeathersMs": 1901.5,
+      "medianBeforeConfigPercent": 93.15
+    }
+  ]
+}

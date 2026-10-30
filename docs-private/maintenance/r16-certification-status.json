@@ -1,0 +1,45 @@
+{
+  "candidate": "r16-quasar2-vite-ssr-feathers-v0.2.6",
+  "status": "CERTIFIED_BY_MAINTAINER_ON_WINDOWS",
+  "date": "2026-10-28",
+  "evidence_kind": "User-supplied terminal logs; NOT rerun as Windows E2E in archive build environment",
+  "baseline": {
+    "plugin_npm": "@vevedh/vite-plugin-feathersjs@0.2.6",
+    "quasar": "2.35.2",
+    "quasar_app_vite": "2.6.2",
+    "vite": "7.3.7",
+    "node": "22.23.4",
+    "pnpm": "10.30.2",
+    "playwright": "1.64.1",
+    "browser": "Microsoft Edge / GPU disabled"
+  },
+  "certification": {
+    "plugin_typecheck": "PASS",
+    "plugin_unit_tests": "PASS 22/22",
+    "plugin_integration_tests": "PASS 10/10",
+    "plugin_build_and_pack": "PASS",
+    "npm_published_and_independent_install": "PASS",
+    "npm_audit_runtime": "PASS 0 findings at time of check",
+    "npm_registry_signatures": "PASS 225, attestations 28",
+    "quasar_browser_contracts": "PASS 8/8",
+    "quasar_node_contracts": "PASS 35/35",
+    "quasar_dev_edge_rest_koa": "PASS 4/4 (1 realtime skipped by design)",
+    "quasar_dev_edge_rest_express": "PASS 4/4 (1 realtime skipped by design)",
+    "quasar_dev_edge_socket_koa": "PASS 5/5",
+    "quasar_dev_edge_socket_express": "PASS 5/5",
+    "quasar_ssr_build": "PASS",
+    "quasar_ssr_compiled_dependencies": "PASS (17 declared)",
+    "quasar_production_edge_socket_koa": "PASS 5/5",
+    "quasar_production_edge_socket_express": "PASS 5/5"
+  },
+  "limitations": [
+    "lab only",
+    "no auth/rbac",
+    "in-memory data",
+    "Socket.IO demo channel not access-controlled",
+    "no SSG / PWA certification"
+  ],
+  "next": "R17 generator: reuse R15 planning engine, implement and certify each UI/render engine independently",
+  "full_report": "docs-private/maintenance/R16_CERTIFICATION_FINAL_2026-10-28.md",
+  "freeze_manifest": "docs-private/maintenance/r16-freeze-manifest.json"
+}

@@ -1,0 +1,400 @@
+{
+  "generatedAt": "2026-10-17T21:36:30.342Z",
+  "node": "v22.23.2",
+  "platform": "win32",
+  "profile": "r10-runner",
+  "configLoader": "runner",
+  "repetitions": 1,
+  "cases": [
+    {
+      "label": "koa-rest",
+      "readyMs": 44282,
+      "configLoader": "runner",
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "vite.config.resolved",
+          "msFromSpawn": 42284,
+          "pid": 48904
+        },
+        {
+          "phase": "vite.configureServer.enter",
+          "msFromSpawn": 42689,
+          "pid": 48904
+        },
+        {
+          "phase": "vite.postMiddleware.enter",
+          "msFromSpawn": 42798,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.discovery.start",
+          "msFromSpawn": 42804,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.discovery.end",
+          "msFromSpawn": 42933,
+          "pid": 48904,
+          "count": 2
+        },
+        {
+          "phase": "feathers.runtime.create.start",
+          "msFromSpawn": 42933,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.app.create.start",
+          "msFromSpawn": 42936,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.adapter.configured",
+          "msFromSpawn": 42975,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.modules.load.start",
+          "msFromSpawn": 42976,
+          "pid": 48904,
+          "count": 2
+        },
+        {
+          "phase": "feathers.modules.load.end",
+          "msFromSpawn": 43704,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.runtime.create.end",
+          "msFromSpawn": 43705,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.transport.start",
+          "msFromSpawn": 43706,
+          "pid": 48904
+        },
+        {
+          "phase": "feathers.transport.ready",
+          "msFromSpawn": 43712,
+          "pid": 48904
+        },
+        {
+          "phase": "vite.postMiddleware.exit",
+          "msFromSpawn": 43713,
+          "pid": 48904
+        }
+      ],
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 15560.5
+        }
+      ],
+      "run": 1
+    },
+    {
+      "label": "express-rest",
+      "readyMs": 42728,
+      "configLoader": "runner",
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "vite.config.resolved",
+          "msFromSpawn": 39988,
+          "pid": 17460
+        },
+        {
+          "phase": "vite.configureServer.enter",
+          "msFromSpawn": 40451,
+          "pid": 17460
+        },
+        {
+          "phase": "vite.postMiddleware.enter",
+          "msFromSpawn": 40607,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.discovery.start",
+          "msFromSpawn": 40612,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.discovery.end",
+          "msFromSpawn": 40807,
+          "pid": 17460,
+          "count": 2
+        },
+        {
+          "phase": "feathers.runtime.create.start",
+          "msFromSpawn": 40808,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.app.create.start",
+          "msFromSpawn": 40813,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.adapter.configured",
+          "msFromSpawn": 40847,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.modules.load.start",
+          "msFromSpawn": 40849,
+          "pid": 17460,
+          "count": 2
+        },
+        {
+          "phase": "feathers.modules.load.end",
+          "msFromSpawn": 42285,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.runtime.create.end",
+          "msFromSpawn": 42288,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.transport.start",
+          "msFromSpawn": 42306,
+          "pid": 17460
+        },
+        {
+          "phase": "feathers.transport.ready",
+          "msFromSpawn": 42324,
+          "pid": 17460
+        },
+        {
+          "phase": "vite.postMiddleware.exit",
+          "msFromSpawn": 42326,
+          "pid": 17460
+        }
+      ],
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 15626.97
+        }
+      ],
+      "run": 1
+    },
+    {
+      "label": "koa+socketio",
+      "readyMs": 67516,
+      "configLoader": "runner",
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "vite.config.resolved",
+          "msFromSpawn": 60978,
+          "pid": 39104
+        },
+        {
+          "phase": "vite.configureServer.enter",
+          "msFromSpawn": 62289,
+          "pid": 39104
+        },
+        {
+          "phase": "vite.postMiddleware.enter",
+          "msFromSpawn": 62672,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.discovery.start",
+          "msFromSpawn": 62686,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.discovery.end",
+          "msFromSpawn": 63235,
+          "pid": 39104,
+          "count": 2
+        },
+        {
+          "phase": "feathers.runtime.create.start",
+          "msFromSpawn": 63240,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.app.create.start",
+          "msFromSpawn": 63249,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.adapter.configured",
+          "msFromSpawn": 63423,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.modules.load.start",
+          "msFromSpawn": 63424,
+          "pid": 39104,
+          "count": 2
+        },
+        {
+          "phase": "feathers.modules.load.end",
+          "msFromSpawn": 66172,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.runtime.create.end",
+          "msFromSpawn": 66175,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.transport.start",
+          "msFromSpawn": 66190,
+          "pid": 39104
+        },
+        {
+          "phase": "socketio.listen.start",
+          "msFromSpawn": 66216,
+          "pid": 39104
+        },
+        {
+          "phase": "socketio.listen.ready",
+          "msFromSpawn": 66356,
+          "pid": 39104
+        },
+        {
+          "phase": "feathers.transport.ready",
+          "msFromSpawn": 66407,
+          "pid": 39104
+        },
+        {
+          "phase": "vite.postMiddleware.exit",
+          "msFromSpawn": 66442,
+          "pid": 39104
+        }
+      ],
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 14566.26
+        }
+      ],
+      "run": 1
+    },
+    {
+      "label": "express+socketio",
+      "readyMs": 51992,
+      "configLoader": "runner",
+      "status": "PASS",
+      "timings": [
+        {
+          "phase": "vite.config.resolved",
+          "msFromSpawn": 49154,
+          "pid": 18864
+        },
+        {
+          "phase": "vite.configureServer.enter",
+          "msFromSpawn": 49714,
+          "pid": 18864
+        },
+        {
+          "phase": "vite.postMiddleware.enter",
+          "msFromSpawn": 49926,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.discovery.start",
+          "msFromSpawn": 49933,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.discovery.end",
+          "msFromSpawn": 50173,
+          "pid": 18864,
+          "count": 2
+        },
+        {
+          "phase": "feathers.runtime.create.start",
+          "msFromSpawn": 50174,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.app.create.start",
+          "msFromSpawn": 50177,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.adapter.configured",
+          "msFromSpawn": 50213,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.modules.load.start",
+          "msFromSpawn": 50214,
+          "pid": 18864,
+          "count": 2
+        },
+        {
+          "phase": "feathers.modules.load.end",
+          "msFromSpawn": 51696,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.runtime.create.end",
+          "msFromSpawn": 51699,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.transport.start",
+          "msFromSpawn": 51707,
+          "pid": 18864
+        },
+        {
+          "phase": "socketio.listen.start",
+          "msFromSpawn": 51711,
+          "pid": 18864
+        },
+        {
+          "phase": "socketio.listen.ready",
+          "msFromSpawn": 51751,
+          "pid": 18864
+        },
+        {
+          "phase": "feathers.transport.ready",
+          "msFromSpawn": 51753,
+          "pid": 18864
+        },
+        {
+          "phase": "vite.postMiddleware.exit",
+          "msFromSpawn": 51758,
+          "pid": 18864
+        }
+      ],
+      "viteConfigDebug": [
+        {
+          "event": "config.load",
+          "durationMs": 15446.18
+        }
+      ],
+      "run": 1
+    }
+  ],
+  "summaries": [
+    {
+      "label": "koa-rest",
+      "medianMs": 44282,
+      "samples": 1
+    },
+    {
+      "label": "express-rest",
+      "medianMs": 42728,
+      "samples": 1
+    },
+    {
+      "label": "koa+socketio",
+      "medianMs": 67516,
+      "samples": 1
+    },
+    {
+      "label": "express+socketio",
+      "medianMs": 51992,
+      "samples": 1
+    }
+  ]
+}

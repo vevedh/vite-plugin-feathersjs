@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="160" viewBox="0 0 840 160" role="img" aria-labelledby="title desc">
+<title id="title">Parcours d'une requête FeathersJS</title><desc id="desc">Le frontend Vue 3 et Pinia appelle le proxy local, qui transmet les requêtes à l'API FeathersJS Koa ou Express, puis aux services health et notes.</desc>
+<rect width="840" height="160" rx="18" fill="#f8fafc"/>
+<g font-family="system-ui, sans-serif" text-anchor="middle" font-size="16" fill="#0f172a">
+<rect x="20" y="36" width="182" height="86" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="111" y="71" font-weight="700">Vue 3 + Pinia</text><text x="111" y="96" font-size="13">Frontend</text>
+<rect x="239" y="36" width="152" height="86" rx="12" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/><text x="315" y="70" font-weight="700">Proxy local</text><text x="315" y="96" font-size="13">/api</text>
+<rect x="428" y="36" width="170" height="86" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="513" y="69" font-weight="700">FeathersJS v5</text><text x="513" y="96" font-size="13">Koa / Express</text>
+<rect x="635" y="36" width="184" height="86" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><text x="727" y="69" font-weight="700">Services</text><text x="727" y="96" font-size="13">health · notes</text>
+</g><g fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"><path d="M205 79h31m-8-7 8 7-8 7"/><path d="M394 79h31m-8-7 8 7-8 7"/><path d="M601 79h31m-8-7 8 7-8 7"/></g></svg>

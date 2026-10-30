@@ -1,0 +1,20 @@
+{
+  "candidate": "Basic r15",
+  "baseline": "Basic r14-r2",
+  "checks": [
+    "CLI option matrix",
+    "CLI read-only test",
+    "HTML E2E environment parsing",
+    "generator compatibility",
+    "Feathers service blueprints",
+    "Feathers MCP",
+    "Pinia static contract",
+    "Node syntax"
+  ],
+  "runtimeCertification": "pending Windows E2E",
+  "changedFiles": [
+    "examples/basic/scripts/check-basic-e2e.mjs",
+    "examples/basic/scripts/e2e-env.mjs",
+    "examples/basic/scripts/check-r14-html-e2e.mjs"
+  ]
+}
