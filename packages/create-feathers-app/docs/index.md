@@ -22,18 +22,18 @@ features:
 
 ## Créer un projet
 
-Une fois le package **publié sur npm**, lancez :
+Avant de choisir un canal de distribution, vérifiez les [versions disponibles sur npm](/maintenance/publication). Si le tag `next` est disponible :
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest create-feathers-app mon-projet --ui daisyui --render spa
+npx --yes --package=@vevedh/create-feathers-app@next create-feathers-app mon-projet --ui daisyui --render spa
 ```
 
 Pour afficher l'aide avec le raccourci `cfapp` :
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest cfapp --help
+npx --yes --package=@vevedh/create-feathers-app@next cfapp --help
 ```
 
-**Avant la publication** : ces commandes npm ne sont pas garanties disponibles. Pour tester la RC10 depuis le dépôt, consultez le [guide de démarrage](/guide/installation).
+Le tag `next` peut évoluer. Pour une installation reproductible, utilisez une version exacte réellement publiée ; pour tester les sources de la RC10, consultez le [guide de démarrage](/guide/installation).
 
 La génération ne rend pas automatiquement les profils avancés prêts pour Internet. Consultez les [limites d'authentification et de persistance](/guide/identites-bases).

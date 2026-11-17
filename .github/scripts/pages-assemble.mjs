@@ -20,7 +20,7 @@ while (true) {
 }
 const sites = [
   { name: 'PLUGIN', dir: 'docs/.vitepress/dist', base: '/vite-plugin-feathersjs/', prefix: '' },
-  { name: 'CLI', dir: 'docs/cli/.vitepress/dist', base: '/vite-plugin-feathersjs/cli/', prefix: 'cli' },
+  { name: 'CLI', dir: 'packages/create-feathers-app/docs/.vitepress/dist', base: '/vite-plugin-feathersjs/cli/', prefix: 'cli' },
 ]
 const forbidden = /(?:^|[/\\])(?:docs-private|patch-memory|node_modules|\.git|\.env(?:\.|$)|\.agents|\.claude|\.codex)(?:[/\\]|$)/i
 const eligible = new Set(['.html','.css','.js','.json','.svg','.png','.webp','.jpg','.jpeg','.gif','.ico','.woff','.woff2','.ttf','.txt','.xml','.webmanifest','.avif','.map'])

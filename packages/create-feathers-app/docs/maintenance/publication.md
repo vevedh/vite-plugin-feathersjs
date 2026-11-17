@@ -4,14 +4,20 @@
 
 ## Installer depuis npm
 
-Lorsque la version aura été publiée :
+Vérifiez la présence et la version du canal `next` avant toute installation :
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest create-feathers-app --help
-npx --yes --package=@vevedh/create-feathers-app@latest cfapp --help
+npm view @vevedh/create-feathers-app dist-tags --json
 ```
 
-`npx cfapp` sans `--package` ne garantit pas de sélectionner ce CLI. Pour automatiser une installation, remplacez `@latest` par une version précise.
+Si le canal `next` existe :
+
+```powershell
+npx --yes --package=@vevedh/create-feathers-app@next create-feathers-app --help
+npx --yes --package=@vevedh/create-feathers-app@next cfapp --help
+```
+
+`npx cfapp` sans `--package` ne garantit pas de sélectionner ce CLI. Pour automatiser une installation, remplacez `@next` par une version précise.
 
 ## Vérifier une version
 

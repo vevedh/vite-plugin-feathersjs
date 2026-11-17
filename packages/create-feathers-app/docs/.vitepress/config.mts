@@ -13,6 +13,7 @@ export default defineConfig({
     logo: '/logo.svg',
     nav: [
       {text:'Démarrer',link:'/guide/installation'},
+      {text:'Documentation du plugin',link:'https://vevedh.github.io/vite-plugin-feathersjs/'},
       {text:'Choisir un rendu',link:'/guide/rendus'},
       {text:'CLI',link:'/reference/commandes'},
       {text:'Services',link:'/guide/services'},
@@ -43,7 +44,7 @@ export default defineConfig({
       ]},
     ],
     outline: [2,3],
-    socialLinks: [],
+    socialLinks: [{icon:'github',link:'https://github.com/vevedh/vite-plugin-feathersjs'}],
     search: {provider:'local'},
     footer: {message:'Documentation de create-feathers-app',copyright:'MIT'},
   },

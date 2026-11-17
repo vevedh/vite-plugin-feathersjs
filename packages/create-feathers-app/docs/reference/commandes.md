@@ -1,5 +1,7 @@
 # Référence CLI — sources `0.1.0-rc.10`
 
+Les commandes npm utilisant `@next` supposent l’existence de ce dist-tag. Vérifiez-le avant l’installation avec `npm view @vevedh/create-feathers-app dist-tags --json`.
+
 Commande : `create-feathers-app <nom> [options]` (alias `cfapp` dans le prochain paquet). Cette page décrit **la source candidate locale**, pas nécessairement la version npm déjà publiée.
 
 | Option | Valeurs acceptées | Par défaut |
@@ -30,8 +32,8 @@ Les adaptateurs déclarables incluent `memory`, `mongodb`, `postgresql`, `mariad
 ## Exécution npm (après publication)
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest create-feathers-app --help
-npx --yes --package=@vevedh/create-feathers-app@latest cfapp --version
+npx --yes --package=@vevedh/create-feathers-app@next create-feathers-app --help
+npx --yes --package=@vevedh/create-feathers-app@next cfapp --version
 ```
 
 Les deux exécutables sont inclus dans le même package. Ne pas utiliser `npx cfapp` sans `--package` : cela ne sélectionne pas nécessairement notre CLI.

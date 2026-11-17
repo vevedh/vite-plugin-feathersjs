@@ -2,20 +2,20 @@
 
 Le CLI s'appelle **`@vevedh/create-feathers-app`** sur npm et expose les exécutables `create-feathers-app` et `cfapp` dans la prochaine version à certifier. Node.js **22.12 ou supérieur** est requis par le manifeste du CLI.
 
-::: warning Publication en attente
-La source candidate est `0.1.0-rc.10`. Les commandes npm ci-dessous s’appliqueront **après publication du paquet**. Avant cela, utilisez la version locale en suivant les instructions de développement.
+::: warning Vérifier le canal npm
+Les exemples utilisent `@next` **seulement si ce dist-tag existe**. Vérifiez-le avec `npm view @vevedh/create-feathers-app dist-tags --json` avant l'installation. Pour une CI, remplacez le tag par une version exacte. Le guide décrit la source `0.1.0-rc.10` sans présumer de la version actuellement publiée.
 :::
 
-## 1. Créer une application (après publication)
+## 1. Créer une application (avec le canal npm vérifié)
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest create-feathers-app mon-projet --ui daisyui --render spa
+npx --yes --package=@vevedh/create-feathers-app@next create-feathers-app mon-projet --ui daisyui --render spa
 ```
 
 L'option `--dry-run` permet de voir le plan **sans écrire de fichiers** :
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest cfapp mon-projet --dry-run --json
+npx --yes --package=@vevedh/create-feathers-app@next cfapp mon-projet --dry-run --json
 ```
 
 ## 2. Installer et démarrer
@@ -33,10 +33,10 @@ Pour le profil SPA `--dev-api vite`, Vite sert l'interface et l'API de développ
 ## 3. Consulter l'aide
 
 ```powershell
-npx --yes --package=@vevedh/create-feathers-app@latest cfapp --help
+npx --yes --package=@vevedh/create-feathers-app@next cfapp --help
 ```
 
-L'alias `cfapp` est défini dans le même package : **`npx cfapp` tout seul est ambigu** et peut invoquer un autre package npm. Utilisez toujours `--package=@vevedh/create-feathers-app@VERSION` pour cibler notre binaire. En CI, remplacez `@latest` par une version exacte.
+L'alias `cfapp` est défini dans le même package : **`npx cfapp` tout seul est ambigu** et peut invoquer un autre package npm. Utilisez toujours `--package=@vevedh/create-feathers-app@VERSION` pour cibler notre binaire. En CI, remplacez `@next` par une version exacte.
 
 ## Tester la RC10 directement depuis le dépôt (sans npm)
 
