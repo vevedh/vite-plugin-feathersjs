@@ -27,6 +27,7 @@ export default defineConfig({
       { text: 'Premiers pas', link: '/guide/demarrage' },
       { text: 'Exemples', link: '/guide/exemples' },
       { text: 'Aide', link: '/guide/depannage' },
+      { text: 'CLI create-feathers-app', link: 'https://vevedh.github.io/vite-plugin-feathersjs/cli/' },
     ],
     sidebar: [
       { text: 'Bienvenue', items: [

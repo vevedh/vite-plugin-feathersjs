@@ -1,44 +1,67 @@
-name: Documentation CLI
+name: Pages publiques - Plugin et CLI
 
 on:
   push:
     branches: [main]
     paths:
-      - 'docs/cli/**'
+      - 'docs/**'
       - '.github/workflows/cli-vitepress-pages.yml'
+      - '.github/scripts/pages-assemble.mjs'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: cli-pages
+  group: github-pages
   cancel-in-progress: false
 
 jobs:
   build:
+    name: Construire les deux VitePress
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Recuperer les sources publiques
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Node.js 22
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Activer pnpm
-        run: corepack enable && corepack prepare pnpm@10.30.2 --activate
-      - name: Installer les dépendances verrouillées
-        working-directory: docs/cli
-        run: pnpm install --frozen-lockfile --ignore-scripts
-      - name: Construire la documentation
-        working-directory: docs/cli
+      - name: pnpm 10.30.2
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.30.2
+          run_install: false
+      - name: Verifier la version pnpm
+        run: test "$(pnpm --version)" = "10.30.2"
+      - name: Installer les dependances du plugin (lockfile fige)
+        run: pnpm --dir docs install --frozen-lockfile --ignore-scripts
+      - name: Installer les dependances du CLI (lockfile fige)
+        run: pnpm --dir docs/cli install --frozen-lockfile --ignore-scripts
+      - name: Compiler la documentation du plugin
         env:
           VITEPRESS_BASE: /vite-plugin-feathersjs/
-        run: pnpm run build
-      - uses: actions/upload-pages-artifact@v4
+        run: pnpm --dir docs run build
+      - name: Compiler la documentation du CLI
+        env:
+          VITEPRESS_BASE: /vite-plugin-feathersjs/cli/
+        run: pnpm --dir docs/cli run build
+      - name: Assembler et controler un artefact public unique
+        env:
+          PAGES_OUTPUT_DIR: ${{ runner.temp }}/vite-feathers-public-pages
+        run: node .github/scripts/pages-assemble.mjs
+      - name: Configurer GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Charger l'artefact Pages unique
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: docs/cli/.vitepress/dist
+          path: ${{ runner.temp }}/vite-feathers-public-pages
+
   deploy:
+    name: Publier GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -48,5 +71,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deployer les deux guides
+        id: deployment
         uses: actions/deploy-pages@v4

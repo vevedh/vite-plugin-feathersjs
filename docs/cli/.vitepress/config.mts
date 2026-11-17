@@ -5,13 +5,14 @@ export default defineConfig({
   base: process.env.VITEPRESS_BASE || '/',
   title: 'create-feathers-app',
   description: 'Créer une application Vue 3, Quasar 2 ou daisyUI avec FeathersJS v5.',
-  cleanUrls: true,
+  cleanUrls: false,
   lastUpdated: true,
   themeConfig: {
     nav: [
       { text: 'Démarrer', link: '/guide/installation' },
       { text: 'Rendus', link: '/guide/rendus' },
       { text: 'Options CLI', link: '/reference/commandes' },
+      { text: 'Guide du plugin', link: 'https://vevedh.github.io/vite-plugin-feathersjs/' },
     ],
     sidebar: [
       {
