@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+const read = path => readFileSync(new URL(path, import.meta.url), 'utf8')
+const config = read('../vite.config.ts')
+const page = read('../src/pages/feathers.vue')
+const store = read('../src/feathers/services/notes/store.ts')
+const client = read('../src/lib/feathers-client.ts')
+const service = read('../server/services/notes/notes.service.ts')
+for (const item of ['FEATHERS_ADAPTER', 'FEATHERS_SOCKETIO', 'socketEnabled ?'])
+  assert.ok(config.includes(item), `Missing configuration: ${item}`)
+assert.ok(page.includes('const realtime = __FEATHERS_SOCKET_ENABLED__'))
+assert.ok(store.includes('createNotesApi(__FEATHERS_SOCKET_ENABLED__, __FEATHERS_SOCKET_PORT__)'))
+assert.match(client, /client\.configure\(rest\(`\$\{window\.location\.origin\}\/api`\)/)
+assert.match(client, /client\.configure\(socketio\(socket\)\)/)
+assert.ok(service.includes('RealTimeConnection'))
+console.log('PASS: four basic modes with Feathers + Pinia source contract (static only)')

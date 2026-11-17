@@ -1,0 +1,16 @@
+node_modules/
+**/node_modules/
+**/.vitepress/dist/
+**/.vitepress/cache/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.agents/
+docs-private/
+.release/
+certification/
+*.tgz
+*.zip
+*.log

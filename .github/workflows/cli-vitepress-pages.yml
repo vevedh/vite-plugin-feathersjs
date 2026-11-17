@@ -1,0 +1,52 @@
+name: Documentation CLI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/cli/**'
+      - '.github/workflows/cli-vitepress-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cli-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Activer pnpm
+        run: corepack enable && corepack prepare pnpm@10.30.2 --activate
+      - name: Installer les dépendances verrouillées
+        working-directory: docs/cli
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Construire la documentation
+        working-directory: docs/cli
+        env:
+          VITEPRESS_BASE: /vite-plugin-feathersjs/
+        run: pnpm run build
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs/cli/.vitepress/dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,5 @@
+@import "tailwindcss" source(none);
+@source "./";
+@source "../index.html";
+@plugin "daisyui";
+:root { font-family: ui-sans-serif, system-ui, sans-serif }

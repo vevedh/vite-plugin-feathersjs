@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="225" viewBox="0 0 850 225" role="img" aria-labelledby="title desc">
+<title id="title">Les trois modes de rendu et l'API FeathersJS</title><desc id="desc">SPA, SSR Node et SSG pages publiques utilisent tous une API FeathersJS REST distincte pour les données dynamiques.</desc>
+<rect width="850" height="225" rx="18" fill="#f8fafc"/>
+<g font-family="system-ui, sans-serif" text-anchor="middle" fill="#0f172a">
+<rect x="22" y="32" width="242" height="76" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="143" y="62" font-size="17" font-weight="700">SPA</text><text x="143" y="84" font-size="13">Vue dans le navigateur</text>
+<rect x="304" y="32" width="242" height="76" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="425" y="62" font-size="17" font-weight="700">SSR</text><text x="425" y="84" font-size="13">HTML produit par Node</text>
+<rect x="586" y="32" width="242" height="76" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/><text x="707" y="62" font-size="17" font-weight="700">SSG</text><text x="707" y="84" font-size="13">HTML public pré-généré</text>
+<rect x="260" y="158" width="330" height="51" rx="12" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/><text x="425" y="189" font-size="17" font-weight="700">API FeathersJS REST séparée</text>
+</g><g fill="none" stroke="#334155" stroke-width="2.5" stroke-linejoin="round"><path d="M143 109v36h282v10m-7-7 7 7 7-7"/><path d="M425 109v46m-7-7 7 7 7-7"/><path d="M707 109v36H425v10m-7-7 7 7 7-7"/></g></svg>

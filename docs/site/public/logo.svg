@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Deux blocs reliés">
+ <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#23b6c1"/><stop offset="1" stop-color="#1765a5"/></linearGradient></defs>
+ <rect x="5" y="5" width="118" height="118" rx="27" fill="#f0fbfd"/>
+ <rect x="19" y="32" width="40" height="40" rx="11" fill="url(#g)"/>
+ <rect x="69" y="56" width="40" height="40" rx="11" fill="#0b3449"/>
+ <path d="M58 51L76 70" fill="none" stroke="#0b3449" stroke-width="6" stroke-linecap="round"/>
+ <path d="M31 51h16M89 67v18" stroke="white" stroke-width="5" stroke-linecap="round"/>
+</svg>

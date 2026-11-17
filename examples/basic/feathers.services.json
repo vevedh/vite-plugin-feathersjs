@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "framework": "feathers-v5",
+  "modules": [
+    {
+      "name": "notes",
+      "path": "notes",
+      "server": "server/services/notes/notes.service.ts",
+      "schema": "shared/feathers/notes.schema.ts",
+      "store": "src/feathers/services/notes/store.ts",
+      "storeExport": "useNotesStore",
+      "methods": [
+        "find",
+        "get",
+        "create",
+        "patch",
+        "remove"
+      ],
+      "events": [
+        "created",
+        "patched",
+        "removed"
+      ],
+      "id": "number",
+      "realtime": "optional",
+      "serviceClass": "server/services/notes/notes.class.ts",
+      "serverSchema": "server/services/notes/notes.schema.ts"
+    },
+    {
+      "name": "health",
+      "path": "health",
+      "server": "server/services/health/health.service.ts",
+      "schema": "shared/feathers/health.schema.ts",
+      "methods": [
+        "find"
+      ],
+      "realtime": false,
+      "serviceClass": "server/services/health/health.class.ts",
+      "serverSchema": "server/services/health/health.schema.ts"
+    }
+  ]
+}

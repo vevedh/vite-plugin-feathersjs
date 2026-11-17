@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 184" role="img" aria-labelledby="title desc">
+<title id="title">De l'interface au service</title><desc id="desc">L'utilisateur agit dans un navigateur, Vitesse transmet une demande, Feathers répond avec les données.</desc>
+<rect x="12" y="24" width="220" height="128" rx="16" fill="#e5f5f8" stroke="#1b8194" stroke-width="2"/>
+<rect x="270" y="24" width="220" height="128" rx="16" fill="#e8ecfd" stroke="#4a67ae" stroke-width="2"/>
+<rect x="528" y="24" width="220" height="128" rx="16" fill="#e7f7ef" stroke="#2e8a65" stroke-width="2"/>
+<g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle" fill="#163244"><text x="122" y="75" font-size="21" font-weight="bold">Navigateur</text><text x="122" y="106" font-size="14">Votre page</text><text x="380" y="75" font-size="21" font-weight="bold">Vite + Vitesse</text><text x="380" y="106" font-size="14">Interface Vue</text><text x="638" y="75" font-size="21" font-weight="bold">FeathersJS</text><text x="638" y="106" font-size="14">Service de notes</text></g>
+<path d="M238 76h22m-6 -6 6 6-6 6M496 76h22m-6 -6 6 6-6 6" stroke="#426a77" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

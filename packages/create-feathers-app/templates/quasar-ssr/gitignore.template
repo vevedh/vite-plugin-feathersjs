@@ -1,0 +1,36 @@
+node_modules/
+.quasar/
+dist/
+.env
+.env.local
+*.log
+.DS_Store
+
+# Editor MCP configuration; local tooling, never committed
+.vscode/mcp.json
+.cursor/
+
+# Playwright Edge reports, traces, recordings and local screenshots
+playwright-report/
+test-results/
+docs-private/
+
+# Development-only configuration and internal artifacts
+.agents/
+.agent/
+.ai/
+.codex/
+.claude/
+.cursor/
+.gemini/
+.windsurf/
+.ecc/
+.mcp.json
+.vscode/mcp.json
+AGENTS.md
+SKILLS.md
+CLAUDE.md
+GEMINI.md
+*.prompt.md
+docs-private/
+.npmrc

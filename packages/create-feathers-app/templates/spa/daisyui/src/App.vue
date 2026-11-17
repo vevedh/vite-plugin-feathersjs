@@ -1,0 +1,2 @@
+<script setup lang="ts">import NotesPanel from './components/NotesPanel.vue'</script>
+<template><main class="min-h-screen bg-base-200 p-6"><div class="max-w-4xl mx-auto space-y-6"><header class="navbar bg-base-100 rounded-box px-6"><div class="text-xl font-bold">Feathers Console — daisyUI SPA</div></header><h1 class="text-3xl font-semibold">Vue 3, daisyUI et FeathersJS v5</h1><p>Le service Feathers est exécuté dans un processus séparé.</p><NotesPanel /></div></main></template>
