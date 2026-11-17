@@ -4,6 +4,8 @@ import { fileURLToPath } from 'node:url'
 import { readFile } from 'node:fs/promises'
 import { createGenerator } from '../lib/scaffold.mjs'
 import { runServiceCommand } from '../lib/services.mjs'
+import { runAuthCommand } from '../lib/auth-command.mjs'
+import { runSchemaCommand } from '../lib/schema-command.mjs'
 const packageRoot=resolve(dirname(fileURLToPath(import.meta.url)),'..')
 const {version}=JSON.parse(await readFile(resolve(packageRoot,'package.json'),'utf8'))
 const args=process.argv.slice(2)
@@ -34,11 +36,23 @@ Usage: create-feathers-app <name> [options]
   --storage <none|s3-external>    Object-storage blueprint (not connected)
   --version           Print CLI version
 
+R14 read-only: create-feathers-app auth plan --provider oidc|keycloak|oauth2 --issuer https://... --client-id ... [--json]
+R14 read-only: create-feathers-app auth inspect [--project <relative-path>] [--json]
+R14 read-only: create-feathers-app schema plan <name> --fields title:string!,priority:int? [--json]
+R14 read-only: create-feathers-app schema validate <name> --fields title:string! --data <local-json> [--operation data|patch|query] [--json]
+R14: auth add and schema add are NOT IMPLEMENTED (fail closed)
+
 Service: create-feathers-app service add <name> [--project <path>] [--schema typebox|json|zod] [--db <alias>] [--auth none|jwt] [--lang js|ts] [--dry-run]
 
 Available: Quasar 2 SPA/SSR; daisyUI SPA, SSR, SSG.
 Quasar SSR uses the R16-certified architecture; R17-generated SSR requires its own Windows E2E certification. Quasar SSG not supported.`)
 }else if(args.includes('--version')||args.includes('-v'))console.log(version)
+else if(args[0]==='auth') {
+  try { await runAuthCommand(args.slice(1),process.cwd()) } catch(error){console.error(`FAIL: ${error.message}`);process.exitCode=1}
+}
+else if(args[0]==='schema') {
+  try { await runSchemaCommand(args.slice(1),process.cwd()) } catch(error){console.error(`FAIL: ${error.message}`);process.exitCode=1}
+}
 else if(args[0]==='service') {
   try { await runServiceCommand(args.slice(1),process.cwd()) } catch(error){console.error(`FAIL: ${error.message}`);process.exitCode=1}
 }
