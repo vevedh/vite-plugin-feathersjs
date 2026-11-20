@@ -1,4 +1,5 @@
 import { schemaSourceTs, classSourceTs, registrarTs, tsServiceConfig } from './typescript.mjs'
+import { canonicalGeneratedContract } from './canonical-contract.mjs'
 import { existsSync } from 'node:fs'
 import { lstat, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve, sep } from 'node:path'
@@ -170,7 +171,7 @@ export async function generateService(opts, cwd=process.cwd(), io={writeFile}) {
   if(text.includes(moduleEntry))throw new Error('Duplicate service registration')
   const tsReady = lang !== 'ts' || (typeof manifest.scripts?.['dev:api'] === 'string' && manifest.scripts['dev:api'].includes('api/server.mjs') && manifest.scripts?.['dev:all'] !== 'vite --host 127.0.0.1')
   const ready=connection.adapter==='memory'&&auth==='none'&&profile.auth==='none'&&tsReady
-  const output={name:opts.name,project,database:{alias:db,adapter:connection.adapter},auth,schema,lang,files:[`api/services/${opts.name}/schema.${ext}`,`api/services/${opts.name}/service.class.${ext}`,`api/services/${opts.name}/${opts.name}.service.${ext}`],ready}
+  const output={name:opts.name,project,database:{alias:db,adapter:connection.adapter},auth,schema,lang,files:[`api/services/${opts.name}/schema.${ext}`,`api/services/${opts.name}/service.class.${ext}`,`api/services/${opts.name}/${opts.name}.service.${ext}`,`api/services/${opts.name}/contract.json`],ready}
   if(opts.dryRun)return output
   if(connection.adapter!=='memory')throw new Error('Database adapter not provisioned for service: '+connection.adapter+'. Refusing implicit in-memory fallback')
   if(!tsReady)throw new Error('TypeScript services require a separate API runtime; Vite-embedded runtime not yet certified')
@@ -197,6 +198,9 @@ export async function generateService(opts, cwd=process.cwd(), io={writeFile}) {
   const files=lang==='ts'
     ? Object.entries({'schema.ts':schemaSourceTs(schema),'service.class.ts':classSourceTs(),[`${opts.name}.service.ts`]:registrarTs(opts.name)})
     : Object.entries({'schema.mjs':schemaSource(schema),'service.class.mjs':classSource(),[`${opts.name}.service.mjs`]:registrar(opts.name,auth)})
+  const templates = Object.fromEntries(files)
+  const contractText = canonicalGeneratedContract({ name: opts.name, schema, lang, schemaContents: templates[`schema.${ext}`], registrarContents: templates[`${opts.name}.service.${ext}`] })
+  files.push(['contract.json', contractText])
   let directoryCreated=false, serverAttempted=false, manifestAttempted=false, tsconfigAttempted=false
   try {
    await mkdir(destination,{recursive:false});directoryCreated=true

@@ -1,3 +1,4 @@
+import { enableFeathersDevtools } from './feathers-devtools.mjs'
 import { mkdir, lstat, readdir, readFile, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { dirname, join, relative, resolve, sep } from 'node:path'
@@ -8,7 +9,7 @@ import { enablePersistentLab } from './persistence-lab.mjs'
 import { enableTenantIsolationLab } from './tenant-lab.mjs'
 import { enableIntegrationBlueprints } from './universal/integrations.mjs'
 
-const KEYS = new Set(['--name', '--dir', '--ui', '--render', '--adapter', '--transport', '--dry-run', '--json', '--schema', '--auth', '--db', '--pwa', '--dev-api', '--compose', '--persistence', '--database-mode', '--cache', '--storage', '--tenant-mode', '--single-server'])
+const KEYS = new Set(['--name', '--dir', '--ui', '--render', '--adapter', '--transport', '--dry-run', '--json', '--schema', '--auth', '--db', '--pwa', '--dev-api', '--compose', '--persistence', '--database-mode', '--cache', '--storage', '--tenant-mode', '--single-server', '--devtools'])
 const CASES = Object.freeze({
   'quasar2:spa': 'quasar-spa',
   'quasar2:ssr': 'quasar-ssr',
@@ -160,7 +161,7 @@ function enableSpaPwa(files, options) {
 export function createGenerator({outputRoot, templatesRoot, examplesRoot = templatesRoot, reportRoot = outputRoot}) {
   const output = resolve(outputRoot), templates = resolve(templatesRoot), report = resolve(reportRoot)
   function parse(args) {
-    const o={ui:'daisyui',render:'spa',adapter:'koa',transport:'rest',schema:'typebox',auth:'none',db:'main:memory',pwa:'off',compose:'off',persistence:'off',tenantMode:'off',singleServer:'off',databaseMode:'single',cache:'none',storage:'none',devApi:undefined,dryRun:false,json:false}
+    const o={ui:'daisyui',render:'spa',adapter:'koa',transport:'rest',schema:'typebox',auth:'none',db:'main:memory',pwa:'off',compose:'off',persistence:'off',tenantMode:'off',singleServer:'off',databaseMode:'single',cache:'none',storage:'none',devApi:undefined,devtools:'off',dryRun:false,json:false}
     const seen=new Set()
     if (args.length && !args[0].startsWith('-')) {o.name=args[0];args=args.slice(1);if(args.includes('--name'))throw new Error('Use either positional name or --name, not both')}
     for(let i=0;i<args.length;i++) {
@@ -188,6 +189,8 @@ export function createGenerator({outputRoot, templatesRoot, examplesRoot = templ
     if (o.compose !== 'off' && o.devApi !== 'vite' && o.compose !== 'prod') throw new Error('Compose dev requires --dev-api vite')
     if (!['on','off'].includes(o.pwa)) throw new Error('Invalid --pwa: expected on|off')
     if (o.pwa==='on' && o.render!=='spa') throw new Error('PWA is supported for SPA only; SSR/SSG require separate certification')
+    if (!['off','feathers'].includes(o.devtools)) throw new Error('Invalid --devtools: off|feathers')
+    if (o.devtools === 'feathers' && !(o.render === 'spa' && o.devApi === 'vite' && o.adapter === 'express')) throw new Error('Feathers Studio requires SPA Vite Express')
     if (!['typebox','json','zod'].includes(o.schema)) throw new Error('Invalid --schema: expected typebox|json|zod')
     if (!['none','jwt','oauth2','oidc','keycloak'].includes(o.auth)) throw new Error('Invalid --auth: expected none|jwt|oauth2|oidc|keycloak')
     if (!/^[a-z][a-z0-9-]{0,31}:(?:memory|mongodb|postgresql|mariadb|mysql|sqlite|universal)(?:,[a-z][a-z0-9-]{0,31}:(?:memory|mongodb|postgresql|mariadb|mysql|sqlite|universal))*$/.test(o.db)) throw new Error('Invalid --db: use alias:adapter[,alias:adapter]')
@@ -302,9 +305,10 @@ export function createGenerator({outputRoot, templatesRoot, examplesRoot = templ
     if (o.tenantMode === 'isolated-lab') await enableTenantIsolationLab(files, o)
     if (o.cache !== 'none' || o.storage !== 'none') await enableIntegrationBlueprints(files, o)
     if (o.singleServer !== 'off') await enableSingleServer(files, o)
+    if(o.devtools==='feathers')await enableFeathersDevtools(files,o)
     const list=[...files.keys()].sort()
     const result={name:o.name,ui:o.ui,render:o.render,adapter:o.adapter,transport:o.transport,
-      destination:relative(report,o.destination).split(sep).join('/'),schema:o.schema,auth:o.auth,pwa:o.pwa,compose:o.compose,persistence:o.persistence,tenantMode:o.tenantMode,databaseMode:o.databaseMode,cache:o.cache,storage:o.storage,devApi:o.devApi,databases:o.databases,...(o.singleServer==='off'?{}:{singleServer:o.singleServer}),files:list}
+      destination:relative(report,o.destination).split(sep).join('/'),schema:o.schema,auth:o.auth,pwa:o.pwa,compose:o.compose,persistence:o.persistence,tenantMode:o.tenantMode,databaseMode:o.databaseMode,cache:o.cache,storage:o.storage,devApi:o.devApi,devtools:o.devtools,databases:o.databases,...(o.singleServer==='off'?{}:{singleServer:o.singleServer}),files:list}
     if(o.dryRun)return result
     // Do not follow symlinks and refuse any existing destination, including empty ones.
     await mkdir(output,{recursive:true})

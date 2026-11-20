@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Feathers Studio · Schema Builder</title>
+  <link rel="stylesheet" href="/__feathers-studio/panel.css">
+  <script type="module" src="/__feathers-studio/panel.js"></script>
+</head>
+<body>
+  <header class="top"><strong>◈ Feathers Studio</strong><span>SCHEMA BUILDER · DEVTOOLS V8</span><span class="status">LECTURE SEULE</span></header>
+  <main class="layout">
+    <aside><div class="section-title">Services Feathers</div><p class="hint">Contrats locaux validés</p><div id="services" aria-label="Liste des services"></div><div class="aside-foot" id="counter"></div></aside>
+    <section class="workspace"><div class="workspace-head"><div><h1 id="service-title">Inspecteur des services</h1><p id="service-route">Aucune écriture dans les services ou la base</p></div><button id="reload" type="button">Actualiser</button></div><div id="notice" role="status">Chargement du catalogue…</div><div id="model"></div></section>
+    <aside class="right"><div class="section-title">Contrat vérifié</div><dl id="details"></dl><p class="hint">Les modifications de schémas s'effectuent exclusivement depuis le CLI local, après préflight, approbation SHA-256 et certification.</p><div class="readonly">🔒 Aucune migration depuis DevTools</div><div class="live-heading">Runtime en direct <span id="live-connection" role="status">Non connecté</span></div><div id="runtime-services" class="live-lines" aria-label="Services enregistrés"></div><div class="section-title live-section">Bases configurées</div><div id="runtime-databases" class="live-lines" aria-label="Bases déclarées"></div><div class="section-title live-section">Derniers événements</div><ol id="runtime-events" class="live-events" aria-label="Événements Feathers récents"></ol><button id="prepare-draft" type="button" disabled title="Réservé aux schémas Zod, JSON Schema et TypeBox">Préparer un brouillon dans Schema Designer</button><p class="hint">Le Designer est local et n'applique aucune migration. Les presets manuels restent consultables ici.</p></aside>
+  </main>
+</body>
+</html>

@@ -2,16 +2,16 @@
 
 Générez des applications FeathersJS v5 avec Vue 3, Pinia, Vite, Quasar 2 ou Tailwind CSS + daisyUI.
 
-Le CLI est indépendant du runtime [`@vevedh/vite-plugin-feathersjs`](https://www.npmjs.com/package/@vevedh/vite-plugin-feathersjs) (version 0.2.7). La version `0.1.0-rc.10` est la candidate présente dans les sources locales. Ne pas présumer de sa publication npm ; vérifier les versions du registre avant installation. La PWA reste optionnelle pour une SPA.
+Le CLI est indépendant du runtime [`@vevedh/vite-plugin-feathersjs`](https://www.npmjs.com/package/@vevedh/vite-plugin-feathersjs) (version 0.2.7). La version `0.1.0-rc.5` est la candidate présente dans les sources locales. Ne pas présumer de sa publication npm ; vérifier les versions du registre avant installation. La PWA reste optionnelle pour une SPA.
 
 ## Usage
 
 ```powershell
-# Après publication de cette préversion sur npm
-npm exec --yes --package=@vevedh/create-feathers-app@0.1.0-rc.10 -- create-feathers-app portail --ui daisyui --render spa
+# Préversion disponible sur npm : 0.1.0-rc.1
+npm exec --yes --package=@vevedh/create-feathers-app@0.1.0-rc.1 -- create-feathers-app portail --ui daisyui --render spa
 
 # Candidate RC5, depuis les sources mises en stage :
-cfapp portail-ssr --ui quasar2 --render ssr
+node .release/create-feathers-app/bin/create-feathers-app.mjs portail-ssr --ui quasar2 --render ssr
 ```
 
 | Interface | SPA | SSR | SSG |
@@ -24,7 +24,7 @@ cfapp portail-ssr --ui quasar2 --render ssr
 Le paramètre `--pwa on` ajoute `vite-plugin-pwa` v2 en dépendance de développement, une icône SVG locale de démonstration et un manifeste Web App. Le service worker, désactivé en développement, est généré au build et conserve uniquement des ressources statiques, jamais les réponses `/api` ou les échanges Socket.IO. Par défaut, `--pwa off` ne change pas les templates existants.
 
 ```powershell
-cfapp portail-spa --ui quasar2 --render spa --pwa on --dry-run
+node .release/create-feathers-app/bin/create-feathers-app.mjs portail-spa --ui quasar2 --render spa --pwa on --dry-run
 ```
 
 SSR/SSG avec PWA est refusé tant que leur cycle de vie n'est pas certifié. Pour une installation sur les navigateurs ciblés, remplacer l'icône SVG de démonstration par des icônes PNG 192 et 512 pixels, puis contrôler HTTPS, les mises à jour et le mode hors-ligne.
@@ -71,7 +71,7 @@ via le proxy WebSocket Vite. La configuration de Feathers échoue au chargement
 si les profils d'identité ou bases externes ne sont pas opérationnels.
 
 ```powershell
-cfapp mon-spa --ui quasar2 --render spa --dev-api vite --transport both
+node .release/create-feathers-app/bin/create-feathers-app.mjs mon-spa --ui quasar2 --render spa --dev-api vite --transport both
 ```
 
 **Production** : le plugin Vite s'exécute uniquement en développement.

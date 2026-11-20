@@ -1,7 +1,8 @@
 {
   "name": "@vevedh/create-feathers-app",
-  "version": "0.1.0-rc.10",
+  "version": "0.1.0-rc.11",
   "type": "module",
+  "private": false,
   "description": "Scaffold FeathersJS v5 projects with Quasar 2 or daisyUI, Vite, Vue 3 and Pinia",
   "license": "MIT",
   "bin": {
@@ -31,10 +32,5 @@
     "vue",
     "ssr",
     "ssg"
-  ],
-  "private": false,
-  "scripts": {
-    "test": "node --test tests/cli-smoke.test.mjs",
-    "check:source": "npm run test"
-  }
+  ]
 }
