@@ -66,13 +66,17 @@ Le package expose également `createFeathersRuntime`, `createManagedFeathersRunt
 
 ## Développement et production
 
-Le plugin relie Vite et Feathers **pendant le développement**. En production, démarrez et sécurisez l'API Feathers dans votre serveur Node.js ou Bun selon l'architecture retenue. Validez les règles d'authentification, les autorisations par service, les origines CORS et le stockage des secrets avant déploiement.
+Le plugin relie Vite et Feathers **pendant le développement** (development-only). En production, démarrez et sécurisez l'API Feathers dans votre serveur Node.js ou Bun selon l'architecture retenue. Validez les règles d'authentification, les autorisations par service, les origines CORS et le stockage des secrets avant déploiement.
 
 La documentation du dépôt présente les exemples Vite et Quasar 2, les options et les points de dépannage.
 
 ## Compatibilité
 
-Cette branche documente `@vevedh/vite-plugin-feathersjs` **0.2.7** pour **Vite 7** et **FeathersJS v5**. Elle remplace le code historique du dépôt GitHub ; elle ne prétend pas maintenir l'API de l'ancien package npm non scopé `vite-plugin-feathersjs` 1.4.0.
+Cette documentation concerne `@vevedh/vite-plugin-feathersjs` **0.3.0** pour **Vite 7** et **FeathersJS v5**. Elle remplace le code historique du dépôt GitHub ; elle ne prétend pas maintenir l'API de l'ancien package npm non scopé `vite-plugin-feathersjs` 1.4.0.
+
+## Authentification Keycloak
+
+Le plugin expose `createKeycloakTransportBridge` et `installKeycloakEventFence` pour les applications Feathers qui valident des jetons OIDC. Ces fonctions sont optionnelles et nécessitent une configuration serveur explicite, une audience API dédiée et une résolution des droits côté serveur. Le filtre d’événements ne protège pas les émissions Socket.IO brutes. Les essais Keycloak réels restent distincts des tests JWKS locaux. Voir [le guide de qualification](https://vevedh.github.io/vite-plugin-feathersjs/guide/release.html).
 
 ## Licence
 

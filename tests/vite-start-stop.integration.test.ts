@@ -1,5 +1,5 @@
 import { createServer as createHttpServer } from 'node:http'
-import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises'
+import { mkdtemp, mkdir, realpath, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import type { AddressInfo } from 'node:net'
@@ -61,7 +61,7 @@ for (const adapter of ['koa', 'express'] as const satisfies readonly Adapter[]) 
   for (const realtime of [false, true] as const) {
     describe(`${adapter} Vite 7 lifecycle, Socket.IO ${realtime ? 'on' : 'off'}`, () => {
       it('starts only after Vite listens, returns 503 until ready and closes cleanly', async () => {
-        const root = await mkdtemp(join(tmpdir(), 'feathers-vite-lifecycle-'))
+        const root = await realpath(await mkdtemp(join(await realpath(tmpdir()), 'feathers-vite-lifecycle-')))
         directories.push(root)
         await mkdir(join(root, 'server'), { recursive: true })
         await writeFile(join(root, 'index.html'), '<html><body>Vite runtime</body></html>')
@@ -136,7 +136,7 @@ for (const adapter of ['koa', 'express'] as const satisfies readonly Adapter[]) 
 
 for (const realtime of [false, true] as const) {
   it(`supports middlewareMode without Vite HTTP listener (Socket.IO ${realtime ? 'on' : 'off'})`, async () => {
-    const root = await mkdtemp(join(tmpdir(), 'feathers-vite-middleware-'))
+    const root = await realpath(await mkdtemp(join(await realpath(tmpdir()), 'feathers-vite-middleware-')))
     directories.push(root)
     await mkdir(join(root, 'server'), { recursive: true })
     await writeFile(join(root, 'server', 'health.service.ts'), `
