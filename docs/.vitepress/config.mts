@@ -45,6 +45,7 @@ export default defineConfig({
         { text: 'Problèmes courants', link: '/guide/depannage' },
         { text: 'Pour aller plus loin', link: '/guide/pour-aller-plus-loin' },
         { text: 'Lexique', link: '/reference/lexique' },
+        { text: 'Vérifier le plugin', link: '/guide/release' },
       ] },
     ],
     editLink: undefined,
