@@ -209,3 +209,11 @@ export default function feathersPlugin(options: FeathersPluginOptions): Plugin {
     },
   }
 }
+
+/** R14-A2.2-R5: opt-in host-owned transport authentication. */
+export { createKeycloakTransportBridge } from './security/feathers-keycloak-transport.js'
+export type { KeycloakTransportBridge, KeycloakTransportHost, KeycloakTransportOptions, KeycloakServiceHookContext } from './security/feathers-keycloak-transport.js'
+
+/** R14-A2.3: explicit deny-all Feathers event publishing for protected services. */
+export { installKeycloakEventFence } from './security/feathers-keycloak-events.js'
+export type { KeycloakEventFenceApp, KeycloakEventFenceReceipt } from './security/feathers-keycloak-events.js'

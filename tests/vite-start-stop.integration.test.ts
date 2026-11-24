@@ -16,7 +16,7 @@ const directories: string[] = []
 afterEach(async () => {
   for (const socket of clients.splice(0)) socket.disconnect()
   for (const vite of opened.splice(0)) await vite.close()
-  for (const path of directories.splice(0)) await rm(path, { recursive: true, force: true })
+  for (const path of directories.splice(0)) await rm(path, { recursive: true, force: true, maxRetries: 20, retryDelay: 100 })
 })
 
 async function availablePort(): Promise<number> {
